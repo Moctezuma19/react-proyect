@@ -4,4 +4,4 @@ services:
 before_install:
    - docker build -t moctezuma19/react-proyect -f Dockerfile.dev .
    script:
-    - docker run -e CI=true moctezuma19/react-proyect npm run test
+    - docker run moctezuma19/react-proyect npm run test -- --coverage
